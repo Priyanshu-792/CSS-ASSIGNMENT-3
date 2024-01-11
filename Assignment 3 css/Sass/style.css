@@ -1,0 +1,153 @@
+/*Define global variables for colors*/
+:root {
+  --pink:#FF9999; /*variable with global scope*/
+  --grey:#ECECFB; /*variable with global scope*/
+}
+
+/* Reset default styles for all elements */
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/*Styling for a container with a flex display*/
+.box {
+  height: 100%;
+  width: 100%;
+  margin: auto; /*center the container using auto margin*/
+  padding-top: 150px;
+  display: flex; /*use of flexbox*/
+  justify-content: center; /*center content horizontally*/
+  align-items: center; /*center content vertically*/
+}
+
+/*Styling for the main container*/
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex; /*use of flexbox*/
+  justify-content: center; /*center content horizontally*/
+  align-items: center; /*center content vertically*/
+}
+
+/* Styling for the main section as per assignment */
+section {
+  height: 500px;
+  width: 800px;
+  display: flex; /*Use of flexbox*/
+  padding-bottom: 6px;
+  flex-wrap: wrap; /* Enable wrapping for flex items */
+  border: 1px solid black;
+  box-sizing: border-box; /* Include border in the box model */
+}
+
+/* Styling for the upper box within the section */
+.UpperBox {
+  display: flex; /*Use of flexbox*/
+  align-items: center; /*center items vertically*/
+  flex-direction: column; /* Arrange items in a column */
+  width: 96%;
+  height: 44%;
+  border: 2px solid black;
+  margin: auto; /* Center the box using auto margins */
+  margin-bottom: 0; /* Reset bottom margin */
+  padding: auto; /* Center content using auto padding */
+  padding-bottom: 0; /* Reset bottom padding */
+  background-color: var(--pink); /* Use the global pink variable for background color */
+}
+
+/* Styling for heading within the upper box */
+.UpperBox h1 {
+  color: rgb(48, 47, 47); /* Set text color using RGB values */
+  margin-top: 35px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+/* Styling for subheading within the upper box */
+.UpperBox h3 {
+  color: rgb(74, 73, 73); /* Set text color using RGB values */
+  font-size: 20.2px;
+  margin-top: 33px;
+}
+
+/* Styling for the left box within the section */
+.LeftBox {
+  width: 68.2%;
+  margin: auto; /* Center the box using auto margins */
+  margin-top: 0;
+  margin-right: 0;
+  padding-top: 0;
+  height: 50.3%;
+  border: 2px solid black;
+  background-color: yellow;
+  display: flex; /*Use of flexbox*/
+  justify-content: center; /*center content horizontally*/
+  align-items: center; /*center content vertically*/
+}
+
+/* Styling for the image within the left box */
+.LeftBox img {
+  object-fit: cover; /* Ensure the image covers the entire box */
+  height: 96%;
+  width: 98%;
+}
+
+/* Styling for the right box within the section */
+.RightBox {
+  display: flex; /* Use of flexbox*/
+  width: 27.4%;
+  margin: 0 auto auto 0; /* Shorthand property to center the box using auto margins and set right margin to 0 */
+  height: 50.3%;
+  border: 2px solid black;
+  background-color: var(--grey); /* Use the global grey variable for background color */
+  flex-direction: column; /* Arrange items in a column */
+  align-items: center; /* Center items vertically */
+}
+
+/* Styling for an image within the right box */
+.pic img {
+  height: 100px;
+  width: auto; /* Set width to auto, maintaining aspect ratio */
+  margin-top: 10px;
+}
+
+/* Styling for text within the right box */
+.text {
+  text-align: center;
+  margin: 0 14px 0 14px; /* Set margins using shorthand property*/
+  font-size: 17px;
+}
+
+/* Styling for paragraph within the text */
+.text p {
+  margin-top: -13px; /* Move the paragraph up by reducing top margin */
+  padding-bottom: 200px;
+  font-size: 18px;
+}
+
+/* Making the layout responsive for smaller screens */
+@media only screen and (max-width: 650px) {
+  .container {
+    padding: 10px;
+    margin: 0 auto 0 10px; /* Set margins using shorthand as instructed in the assignment */
+  }
+  section {
+    width: 100%;
+    height: 100%;
+  }
+  .UpperBox {
+    height: auto; /* Set height to auto for responsiveness */
+    padding: 10px;
+  }
+  .LeftBox,
+  .RightBox {
+    width: 100%; /* Set width to 100% for responsiveness */
+    height: auto; /* Set height to auto for responsiveness */
+  }
+  .LeftBox img {
+    height: 97%; /* Set height to 97% for responsiveness */
+    width: 98%; /* Set width to 98% for responsiveness */
+  }
+}/*# sourceMappingURL=style.css.map */
